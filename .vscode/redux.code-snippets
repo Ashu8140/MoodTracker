@@ -1,0 +1,70 @@
+{
+	"rect component": {
+		"prefix": "rc",
+		"body": [
+		  "import {FC,memo} from \"react\"",
+		  "type ${1:type}Props={};",
+		  "",
+		  "const ${1:type}:FC<${1:type}Props>=(props)=>{",
+		  "return (",
+		  "<div>",
+		  "</div>",
+		  ")",
+		  "}",
+		  "  ${1:type}.defaultProps={};",
+		  "export default memo(${1:type});"
+		],
+		"description": "rect component"
+	  },
+	  "create action sub reducer": {
+		"prefix": "ac",
+		"body": [
+			
+		  "export const $1=\"$1\";",
+		  "",
+		  "export const Action:ActionCreator<>=($0)=>({",
+		  "    type: \"$1\",",
+		  "    payload: {},",
+		  "});"
+		],
+		"description": "create action sub reducer"
+	  },
+	  "create reducer sub reducer": {
+		"prefix": "reducer",
+		"body": [
+		  "import produce from \"immer\";",
+		  "import { AnyAction } from 'redux';",
+		  "",
+		  "export type State={};",
+		  "export const initialState:State={};",
+		  "function reducer(state=initialState,action:AnyAction):State{",
+		  "    switch(action.type){",
+		  "        default:",
+		  "            return state;",
+		  "    }",
+		  "}",
+		  "export default reducer;",
+		  "",
+		  ""
+		],
+		"description": "create reducer sub reducer"
+	  },
+	  "switch producer": {
+		"prefix": "case",
+		"body": [
+		  "case $1:",
+		  "return produce(state,(draft)=>{",
+		  " $0",
+		  "});"
+		],
+		"description": "switch producer"
+	  },
+	  "console": {
+		"prefix": "cn",
+		"body": [
+		  "console.log($0);"
+		],
+		"description": "console"
+	  }
+
+}
