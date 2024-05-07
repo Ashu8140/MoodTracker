@@ -13,8 +13,8 @@ const ProductListPage:FC<ProductListPageProps>=(props)=>{
 
     useEffect(()=>{
       dispetch(loadProductsAction());
-      axios.get("https://myeasykart.codeyogi.io/products").then((response) =>
-      dispetch(prodectLoadedAction(response.data.data)));
+      axios.get("https://dummyjson.com/products").then((response) =>
+      dispetch(prodectLoadedAction(response.data.products)));
     },[]);                                                                                                                                                                                                                                                                                                                                  
     
 return (
@@ -23,9 +23,9 @@ return (
       
       {products.map((p)=>(
        
-       <div className="p-2 max-w-xs rounded-md ">
+        <div className="p-2 max-w-xs rounded-md ">
        <div className=" w-full aspect-square">
-       <img className="h-full w-full object-cover " src={p.thumbnail} />
+       <img className="h-full w-full object-cover" src={p.thumbnail} />
          </div>
        <h2 className="text-gray-500">{p.category}</h2>
        <h2 className="text-xl">{p.title}</h2>
@@ -41,3 +41,4 @@ return (
   ProductListPage.defaultProps={};
 
 export default memo(ProductListPage);
+

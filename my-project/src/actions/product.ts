@@ -1,5 +1,4 @@
 
-
 import Product from "../models/products";
 import {ActionCreator} from "./index"
 export const LOAD_PRODUCTS="LOAD_PRODUCT";

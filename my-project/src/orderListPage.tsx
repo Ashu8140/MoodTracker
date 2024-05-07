@@ -38,7 +38,7 @@ return(
   <div key={o.id} >
    <Link
             className="text-indigo-700 cursor-pointer" to={"/orders/" + o.id}>Order number {o.id}
-          </Link>, total:{o.total}, products:{o.totalProducts}
+ </Link>, total:{o.total}, products:{o.totalProducts}
   </div>
 ))}
   </div>

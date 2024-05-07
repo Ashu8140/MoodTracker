@@ -9,6 +9,8 @@ type HappyTrackerProps={};
 const HappyTracker:FC<HappyTrackerProps>=()=>{
     
     const happyMoments=useSelector(happyMomentSelecter);
+   //this selector
+   
     const HappyDispetch=useDispatch();
 
     function ClearHappy(){
